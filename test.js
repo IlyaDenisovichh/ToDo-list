@@ -7,7 +7,6 @@ describe('ToDoList', () => {
       cy.get('.input-submit').click();
       cy.get('.input-text').type('Третья заметка');
       cy.get('.input-submit').click();
-      //cy.wait(10000);
       cy.get('li').should('have.length', 3);
       cy.get(':nth-child(1) > .TodoItem_checkbox__Tf0FQ').click();
       cy.get(':nth-child(1) > span').should('have.css', 'text-decoration', 'line-through solid rgb(89, 89, 89)');
